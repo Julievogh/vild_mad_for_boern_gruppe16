@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="42" viewBox="0 0 43 42">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 50 49">
+      <image width="50" height="49" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAxCAYAAACYq/ofAAADpklEQVRoge3aW4gcRRTG8d/szmpMIkEUI7pRUQioqHglXsAHIShL8qBERR80KghBJPgg3o2gxoAPguiDeEEREQMqBrwrSpYIXvCCIIoKQjZkiatJMCZrXMeHmsGxp8ap7p7sdMQ/9MOcmlN9Prqr6pyqrm2fmtTGMqzEOViImmqxFxN4F4/gi1ZDrSnkIDyFKwYRXUFmcAfWwVDT+LT9SwQM40HcRHgiy/DqQEMqx29YPIQbBh1JSeZiZR3nDzqSDH/gG+xps9VwPBZ08VlS/5fGQfATzsO3kbY5eA6XRtoWDEWMg2S9uAjCE1rXzbFqQnb0aN/TraFqQgrzv5CqUTUhC3u0H9KtoWpCVuAiIf3Icgzu7+ZY3wfBTOJZvIMvm79HcBROFzLsy4RENct8vF7kprXtU5ONIo4RfsUDeBi7e/x3FGtwrf6UCuP9erW+F2qYtXqLgM24HpdjVz8C6IeQzUJa8VUB3/VYKmSwpSgrZBpjwjgoyiasLhlHaSGPCQO6LE9gvEwHZYTsxn1lbt5GQ5goChMTMi7MJO3XmZH/vYafy9w8w5vYlrHtxYGReDqSy9QnclLE9n5yiGn8iY0Z2whOSHFOFXJExNatbijDDxHbohTHVCEHR2ylp8wIOxPv3UGqkNiiNS/RNw+xpDEmroNUIRMR2+JE3zwcHbFtSXFMFfJ1xHZBom8qdZybsbV2VHqSKuQznVPeGA5N9E/h4kh/H0sci6lCZrAhY5uDuxL9e1HDnRH7K6kd5FnZH4/YVuGsHH1040acnbFNC3VNEnmEbMQHGdsIXhLqi6JciIci9iexNbWTvLnWamEAtjMqCExagTOsEF7ZAzL2bbg7T0d5hXyOeyL24/AJbpO2voziGbyos+RtCEXXVJ7AitTsa3EirsrY5woZ7M3NAN8QUo6tQh51JM4QavblOp9Ci9sVOOYoIqQh1NrD4odDhwmTwKoCfa8RDm9yU7Qe+R1XCtNvdswUYafwhO8t2kGZwqohFFZL8GGJfl7GKXi+RB992Xz4VEgtlgpT8XSCzw7h8PU0XIIfywbRzw26t5vXPGFX5VQcKxwkzQjBfycI/0io/vrGvthp3IW3mtesUbW938LEhMyf9SjyURfZNx7SmZ6frHonve1cp3Mx/aUubP+MtRmH8Z6QJOZKE2aBRcJ0n2X8P/XlwwZhM3l/5RZMtAb71XhhgMEUYQa34lH+/sypxXJcI6zUh6vm91pbhNOwf3yv9RdTnbCgpMSPmQAAAABJRU5ErkJggg=="/>
+    </pattern>
+  </defs>
+  <rect id="instagram" width="43" height="42" fill="url(#pattern)"/>
+</svg>

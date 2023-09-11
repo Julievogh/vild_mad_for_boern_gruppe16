@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="42" viewBox="0 0 43 42">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 50 49">
+      <image width="50" height="49" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAxCAYAAACYq/ofAAAB7klEQVRoge3aPWgUQRiA4efWE0RFEREkgpVY+tPbaSMqSRHBQhAUbKKlP4WWgoVgpZBKEIugjRJsUgfF3k4sFFFPiMZGbfwp1sB53t5xNzPZUfbt9r7hm+9lZ/Z2dqa1vNTRxV6cwyHswFp58RMdPMUdzK8EWl0il3ANa1a7ugDmcBpf279/mMH1+uoZmxPKUTPdWl7qTOAF1tdbUxCTBU76tyVgpsCBuquIwP4CW+quIgLb2sPbBPMKC3iufHT+qGh3AzvH7SSlyEtcwCPVxXdzNaSzVCLPcBifEuX/iyJBzo+YNLpE0FtECpGbyrkwKkF/ASlE7ibIOZTYc+Q9Xg+Ib8Y+/YfRupCOY4u8GRA7iIfYGLlPxB9a3wbErkgkQZo5UsXWlMlXUyQpjUhuhD61WiO03TMgtgFvsWncQnK5I9MCJMhH5ExoghxEdouwSg2dI8d7rt9hsaLtEf1fDKeMNtf6Eipyv+f6MY5WtL0tYAU4jByGVhQakdxoRHKjEcmNRqSC2na4YovUtj3RDK3caERyoxHJjf9GpC3urtJ2nK2IJfvui89t5Rr7WKSEuzAbKdcoLBa4hy81dB6T2UL5he9i3ZUE8ADzK5P9Fi7je331jMUcTvHnMSfK81rnlee1JuR5XusDnug5r/ULe69FpmJ2ksMAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <rect id="facebook" width="43" height="42" fill="url(#pattern)"/>
+</svg>
