@@ -7,30 +7,34 @@
 }
 
 /* --- CARDS --- */
+
 .card_container {
-  width: 100%;
   background-color: #b3c988;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  position: relative;
-  overflow: hidden;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 200px;
+  max-width: 450px;
 }
 
 /*BILLEDET TIL VENSTRE*/
 
 .råvare_img {
-  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
-.råvare_img img {
-  width: 100%;
+.cards_img {
+  max-width: 40%;
+  margin: 0 auto;
 }
 
 /* BOKSEN MED TEKST*/
 .slide_container {
-  width: 40rem;
-  height: 10rem;
+  max-width: 40rem;
+  height: 16rem;
   background-color: #f9f2e0;
   padding: 1rem 1.25rem;
   margin: 1.25rem 5rem;
@@ -50,20 +54,6 @@
 }
 
 /*CARD NAVIGATIONS*/
-.card_nav {
-  width: 40px;
-  height: 40px;
-  background-color: #f9f2e0;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
 
 .card_container button {
   padding: 0rem;
@@ -76,27 +66,47 @@
   stroke: #45a175;
 }
 
-.btn--right {
-  right: 0;
-  top: 50%;
-  transform: translate(-1rem, -50%);
-}
-
-.btn--left {
-  left: 0;
-  top: 50%;
-  transform: translate(23rem, -50%);
-}
-
 .card_pil:hover {
   stroke: #f07041;
 }
 
-.dots {
+.card_container {
+  width: 100%;
+  background-color: #b3c988;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card_nav {
+  width: 40px;
+  height: 40px;
+  background-color: #f9f2e0;
+  border: none;
+  cursor: pointer;
   position: absolute;
-  left: 60%;
-  bottom: 0%;
-  transform: translate(50%, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Pile margin */
+
+.card_nav.btn--right {
+  right: 8px;
+}
+
+.card_nav.btn--left {
+  left: 8px;
+}
+
+.dots {
 }
 
 .dot_fill {
@@ -163,126 +173,7 @@
   margin: 0;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-}
-
-.råvare_container {
-  margin: 0;
-  padding: 0;
-}
-
-.råvare_overblik {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.opskrift_button img {
-  max-width: 35%;
-}
-.background_råvare {
-  background-color: #b3c988;
-  padding: 1rem;
-  width: 400px;
-  margin: 0 auto;
-  border-radius: 10px 10px 0 0;
-}
-
-.two_box_container {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.råvare_tekst {
-  background-color: #f9f2e0;
-  border: solid #f07041;
-  margin: 1rem;
-}
-
-/* TAB FANER*/
-
-.tabs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 400px;
-  margin: 0 auto;
-  border-radius: 10px 10px 0 0;
-}
-
-/* skjul al indhold undtagen det første */
-.tab-content {
-  display: none;
-}
-
-/* aktivér synligheden for det valgte indhold */
-.tab-content.active {
-  display: block;
-}
-
-/* Tilføj stilarter til fanerne */
-.tab {
-  cursor: pointer;
-  padding: 6px 1px;
-  width: 100px;
-  text-align: center;
-  height: 50px;
-  margin: 0;
-}
-
-.brug-sanserne-tab,
-.find-dem-tab,
-.gode-rad-tab,
-.advarsel-tab {
-  width: 100px;
-}
-
-/* Tilføj baggrundsfarver, tekstfarver, etc.  */
-
-.find-dem-tab,
-.find_dem_content {
-  background-color: #45a175;
-}
-
-.brug-sanserne-tab,
-.brug_sanserne_content {
-  background-color: #b9d047;
-}
-
-.gode-rad-tab,
-.gode_råd_content {
-  background-color: #fbbd76;
-}
-
-.advarsel-tab,
-.advarsel_content {
-  background-color: #f18d68;
-}
-
-.tab-content-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 0px;
-  box-sizing: border-box;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.tab-content {
-  width: 400px;
-  border-radius: 0 0 10px 10px;
-  padding: 10px;
-}
+/* Illustrationer og form */
 
 .lille_illustration {
   max-width: 300px;
@@ -347,12 +238,12 @@ form {
 }
 
 .quiz-question input[type="radio"] {
-  margin-right: 5px; /* Reduce the margin between radio buttons and labels */
-  vertical-align: middle; /* Align radio buttons vertically with labels */
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 .quiz-question label {
-  flex: 1; /* equal space mellem hvert element */
+  flex: 1;
   font-size: 1.2rem;
 }
 

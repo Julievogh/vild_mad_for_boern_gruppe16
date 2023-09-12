@@ -1,3 +1,5 @@
+// Nav bar
+
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navLinks = document.querySelector(".nav-links");
 
@@ -13,21 +15,40 @@ window.addEventListener("resize", () => {
   }
 });
 
-
 // --- CAROUSEL --- //
-const slide_container = document.getElementById("slide_container");
-const slide = document.querySelector(".slide");
-const prevButton = document.getElementById("btn--left");
-const nextButton = document.getElementById("btn--right");
+const slideContainer = document.querySelector(".slide_container");
+const slides = document.querySelectorAll(".slide");
+const prevButton = document.querySelector(".btn--left");
+const nextButton = document.querySelector(".btn--right");
 
-//NAVIGERE MELLEM SLIDES//
+let currentSlideIndex = 0;
+
+// NÆSTE SLIDE
 nextButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slide_container.scrollLeft += slideWidth;
-
+  if (currentSlideIndex < slides.length - 1) {
+    currentSlideIndex++;
+  } else {
+    currentSlideIndex = 0; // Reset to the first slide
+  }
+  scrollSlides();
 });
 
+// FORRIGE SLIDE
 prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slide_container.scrollLeft -= slideWidth;
+  if (currentSlideIndex > 0) {
+    currentSlideIndex--;
+  } else {
+    currentSlideIndex = slides.length - 1; // Set to the last slide
+  }
+  scrollSlides();
 });
+
+// CURRENT SLIDE
+function scrollSlides() {
+  const slideWidth = slides[currentSlideIndex].offsetWidth;
+  const scrollX = slideWidth * currentSlideIndex;
+  slideContainer.scrollTo({
+    left: scrollX,
+    behavior: "smooth",
+  });
+}
