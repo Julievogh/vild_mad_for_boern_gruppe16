@@ -14,4 +14,20 @@ window.addEventListener("resize", () => {
 });
 
 
+// --- CAROUSEL --- //
+const slide_container = document.getElementById("slide_container");
+const slide = document.querySelector(".slide");
+const prevButton = document.getElementById("btn--left");
+const nextButton = document.getElementById("btn--right");
 
+//NAVIGERE MELLEM SLIDES//
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slide_container.scrollLeft += slideWidth;
+
+});
+
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slide_container.scrollLeft -= slideWidth;
+});
