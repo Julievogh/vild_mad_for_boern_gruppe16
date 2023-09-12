@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="wclassth=device-wclassth, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="generel_style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/jyw8sbg.css" />
+  </head>
+  <body>
+    <header class="utility-bar">
+      <p>Er du skolelærer? Gå til undervisnings-sitet</p>
+      <a href="https://vildmad.dk/dk/undervisning">her</a>
+    </header>
+    <nav class="nav-wrapper">
+      <div class="logo">
+        <img src="img/logo_korrekt.svg" alt="logo" id="fixed-logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">FORSIDE</a></li>
+        <li><a href="leksikon.html">LEKSIKON</a></li>
+        <li><a href="opskrifter.html">OPSKRIFTER</a></li>
+        <li><a href="https://vildmad.dk/dk">VILDMAD.DK</a></li>
+      </ul>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="main_container">
+        <h1>Velkommen til <br />VILD MAD FOR BØRN</h1>
+        <img
+          id="maskotter_img"
+          src="img/vildmad_maskotter_done.svg"
+          alt="maskotter"
+        />
+        <h3 class="h3_overskrift_sæson">Sæson</h3>
+        <div class="sæson_cirkel_container">
+          <img src="img/forår3nb.svg" alt="forår knap" />
+          <img src="img/sommer3nb.svg" alt="summer knap" />
+          <img src="img/efterår3nb.svg" alt="efterår knap" />
+          <img src="img/vinter3nb.svg" alt="vinter knap" />
+        </div>
+
+        <div class="sæson_overskrift">
+          <h2 class="sæson_navn">EFTERÅR</h2>
+        </div>
+
+        <img
+          class="lille_illustration"
+          src="img/gren.svg"
+          alt="en lille gren"
+        />
+        <div class="billed_1">
+          <img src="img/VILDMAD_RV_Kantareller_03.png" alt="" />
+        </div>
+
+        <h3>Har du styr på naturens råvarer? <br />Prøv vores quiz:</h3>
+        <h5>
+          Vind en tur i skoven og køkkenet med en professionel sanker og kok,
+          for dig og din klasse!
+        </h5>
+        <img class="pil" src="img/pil2.svg" alt="pil ned mod quiz" />
+
+        <form>
+          <div class="QUIZ">
+            <div class="quiz_container">
+              <div class="input_container">
+                <div class="input-group">
+                  <label for="fornavn">Navn:</label>
+                  <input type="text" class="fornavn" name="fornavn" />
+                </div>
+                <div class="input-group">
+                  <label for="skole">Skole:</label>
+                  <input type="text" class="skole" name="skole" />
+                </div>
+                <div class="input-group">
+                  <label for="klasse">Klasse:</label>
+                  <input type="text" class="klasse" name="klasse" />
+                </div>
+                <div class="input-group">
+                  <label for="email">E-mail:</label>
+                  <input type="email" class="email" name="email" />
+                </div>
+              </div>
+
+              <div class="input_container">
+                <div class="quiz-question-group">
+                  <div class="quiz-question">
+                    <p>Hvilken sæson finder man flest svampe i?</p>
+                  </div>
+                  <div class="quiz-options">
+                    <input
+                      type="radio"
+                      class="forar"
+                      name="season"
+                      value="Forår"
+                    />
+                    <label for="forar">Forår</label>
+                    <input
+                      type="radio"
+                      class="sommer"
+                      name="season"
+                      value="Sommer"
+                    />
+                    <label for="sommer">Sommer</label>
+                    <input
+                      type="radio"
+                      class="efterar"
+                      name="season"
+                      value="Efterår"
+                    />
+                    <label for="efterar">Efterår</label>
+                    <input
+                      type="radio"
+                      class="vinter"
+                      name="season"
+                      value="Vinter"
+                    />
+                    <label for="vinter">Vinter</label>
+                  </div>
+                </div>
+
+                <div class="quiz-question-group">
+                  <div class="quiz-question">
+                    <p>Hvilken af disse er normalt ikke spiselige?</p>
+                  </div>
+                  <div class="quiz-options">
+                    <input
+                      type="radio"
+                      class="skovsyre"
+                      name="not_edible"
+                      value="Skovsyre"
+                    />
+                    <label for="skovsyre">Skovsyre</label>
+                    <input
+                      type="radio"
+                      class="hyldeblomst"
+                      name="not_edible"
+                      value="Hyldeblomst"
+                    />
+                    <label for="hyldeblomst">Hyldeblomst</label>
+                    <input
+                      type="radio"
+                      class="bark"
+                      name="not_edible"
+                      value="Bark"
+                    />
+                    <label for="bark">Bark</label>
+                    <input
+                      type="radio"
+                      class="braendnaelde"
+                      name="not_edible"
+                      value="Brændnælde"
+                    />
+                    <label for="braendnaelde">Brændnælde</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quiz-question-group">
+                <div class="quiz-question">
+                  <p>Hvad er godt at gøre, når man sanker?</p>
+                </div>
+                <div class="quiz-options">
+                  <input
+                    type="radio"
+                    class="godt"
+                    name="sank_tips"
+                    value="Godt"
+                  />
+                  <label for="godt"
+                    >Kun at tage det man skal bruge, og efterlade nok til
+                    naturen og andre</label
+                  ><br />
+                  <input
+                    type="radio"
+                    class="ikke_godt"
+                    name="sank_tips"
+                    value="Ikke godt"
+                  />
+                  <label for="ikke_godt"
+                    >Tage ALT hvad man kan finde, så andre ikke kan få
+                    noget</label
+                  >
+                </div>
+              </div>
+
+              <button class="custom-button">
+                <img src="img/sendsvar_but.svg" alt="send svar knap" />
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="download_container">
+          <h5>DOWNLOAD VORES APP HER</h5>
+          <a href="https://apps.apple.com/dk/app/vild-mad/id1230602644?l=da"
+            ><img src="img/app-store-badge.svg" alt="app store badge"
+          /></a>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=dk.vildmad.sankeapp&hl=da&gl=US"
+            ><img src="img/google-play-badge.svg" alt="google play badge"
+          /></a>
+        </div>
+        <img
+          class="phone_img"
+          src="img/phone.svg"
+          alt="lille sød illustration"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <p class="footer-text">
+        DEL DINE FUND OG EVENTYR MED OS OG DINE VENNER:
+        <br />tag @vildmad og brug hashtagget #vildmad og #minsanketur
+      </p>
+      <div class="footer-icons">
+        <img src="img/instagram.svg" alt="instagram" />
+        <img src="img/facebook.svg" alt="facebook" />
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="database.js"></script>
+    <script src="database_opskrifter.js"></script>
+  </body>
+</html>
