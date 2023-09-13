@@ -2,10 +2,7 @@
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="wclassth=device-wclassth, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vild Mad Børn</title>
     <link rel="stylesheet" href="generel_style.css" />
     <link rel="stylesheet" href="index.css" />
@@ -54,41 +51,87 @@
         </div>
 
         <!-- --- CARDS --- -->
-        <div class="card_container">
-          <div class="råvare_img">
-            <img src="img/Alm-pigsvamp_ravarekort_app.webp" alt="svampe test" />
-          </div>
-          <div class="slide_container">
-            <div class="slide">
-              <h4>NAVNET PÅ RÅVARE</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aliquam totam minima consectetur libero earum. Itaque quisquam
-                iusto, aliquam veniam, sapiente ipsa iste iure voluptatum qui
-                culpa assumenda minima! Explicabo, dicta!
-              </p>
-            </div>
 
-            <div class="slide">
-              <h4>ADVARELSE</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aliquam totam minima consectetur libero earum. Itaque quisquam
-                iusto, aliquam veniam, sapiente ipsa iste iure voluptatum qui
-                culpa assumenda minima! Explicabo, dicta!
-              </p>
-            </div>
+        <section class="indhold">
+          <div class="card_container">
+            <div class="container">
+              <div class="råvare_img">
+                <img
+                  class="cards_img"
+                  src="img/Alm-pigsvamp_ravarekort_app.webp"
+                  alt="svampe test"
+                />
+              </div>
+              <div class="left-card-pil">
+                <button class="card_nav btn--left">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="card_pil"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="content-container">
+                <div class="slide_container">
+                  <div class="slide">
+                    <h4>NAVNET PÅ RÅVARE</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aliquam totam minima consectetur libero earum. Itaque
+                      quisquam iusto, aliquam veniam, sapiente ipsa iste iure
+                      voluptatum qui culpa assumenda minima! Explicabo, dicta!
+                    </p>
+                  </div>
 
-            <div class="slide">
-              <h4>HVOR, HVORNÅR, HVORDAN?</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aliquam totam minima consectetur libero earum. Itaque quisquam
-                iusto, aliquam veniam, sapiente ipsa iste iure voluptatum qui
-                culpa assumenda minima! Explicabo, dicta!
-              </p>
-            </div>
+                  <div class="slide">
+                    <h4>ADVARELSE</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aliquam totam minima consectetur libero earum. Itaque
+                      quisquam iusto, aliquam veniam, sapiente ipsa iste iure
+                      voluptatum qui culpa assumenda minima! Explicabo, dicta!
+                    </p>
+                  </div>
 
+                  <div class="slide">
+                    <h4>HVOR, HVORNÅR, HVORDAN?</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aliquam totam minima consectetur libero earum. Itaque
+                      quisquam iusto, aliquam veniam, sapiente ipsa iste iure
+                      voluptatum qui culpa assumenda minima! Explicabo, dicta!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="right-card-pil">
+                <button class="card_nav btn--right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="card_pil"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
             <div class="dots">
               <button class="dot_fill">&nbsp;</button>
               <button class="dot">&nbsp;</button>
@@ -96,40 +139,94 @@
               <button class="dot">&nbsp;</button>
             </div>
           </div>
-          <button class="card_nav btn--left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="card_pil"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </button>
 
-          <button class="card_nav btn--right">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="card_pil"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </button>
-        </div>
+          <div class="card_container">
+            <div class="container">
+              <div class="råvare_img">
+                <img
+                  class="cards_img"
+                  src="img/Alm-pigsvamp_ravarekort_app.webp"
+                  alt="svampe test"
+                />
+              </div>
+              <div class="left-card-pil">
+                <button class="card_nav btn--left">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="card_pil"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="content-container">
+                <div class="slide_container">
+                  <div class="slide">
+                    <h4>NAVNET PÅ RÅVARE</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aliquam totam minima consectetur libero earum. Itaque
+                      quisquam iusto, aliquam veniam, sapiente ipsa iste iure
+                      voluptatum qui culpa assumenda minima! Explicabo, dicta!
+                    </p>
+                  </div>
+
+                  <div class="slide">
+                    <h4>ADVARELSE</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aliquam totam minima consectetur libero earum. Itaque
+                      quisquam iusto, aliquam veniam, sapiente ipsa iste iure
+                      voluptatum qui culpa assumenda minima! Explicabo, dicta!
+                    </p>
+                  </div>
+
+                  <div class="slide">
+                    <h4>HVOR, HVORNÅR, HVORDAN?</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Aliquam totam minima consectetur libero earum. Itaque
+                      quisquam iusto, aliquam veniam, sapiente ipsa iste iure
+                      voluptatum qui culpa assumenda minima! Explicabo, dicta!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="right-card-pil">
+                <button class="card_nav btn--right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="card_pil"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="dots">
+              <button class="dot_fill">&nbsp;</button>
+              <button class="dot">&nbsp;</button>
+              <button class="dot">&nbsp;</button>
+              <button class="dot">&nbsp;</button>
+            </div>
+          </div>
+        </section>
 
         <img
           class="lille_illustration"
@@ -310,7 +407,7 @@
         <img src="img/facebook.svg" alt="facebook" />
       </div>
     </footer>
-
+    <script src="database.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
