@@ -1,0 +1,130 @@
+.items {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 50px;
+}
+
+.item_box {
+    display: grid;
+    gap: 10px;
+}
+
+.item {
+    display: grid;
+    grid-auto-rows: 3fr 3fr 1fr;
+    gap: 50px;
+    padding: 50px;
+    background-color: #b3c988;
+}
+
+.item a {
+    display: block;
+    width: 100%;
+    background-color: #45a175;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.item_top {
+    display: grid;
+    grid-auto-rows: 300px 20px 265px 85px;
+    gap: 30px;
+}
+
+.items img {
+    box-shadow: 1px 0px 3px black;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+}
+
+.description {
+    padding: 20px;
+    border: 1px solid #f4b191;
+    background-color: white;
+}
+
+/* TABS */
+
+.item_bottom {
+    background-color: #45a175;
+    color: white;
+}
+
+.tab-content {
+    height: 320px;
+    padding: 15px;
+}
+
+.item_bottom a:link, 
+.item_bottom a:active, 
+.item_bottom a:visited, 
+.item_bottom a:hover {
+    border-radius: 0px;
+}
+
+.sans, .find, .raad {
+    width: 100%;
+}
+
+.find {
+    background-color: #f18d68;
+}
+
+.sans {
+    background-color: #b9d047;
+}
+
+.raad {
+    background-color: #fbbd76;
+}
+
+/* BOOTSTRAP OVERRIDE */
+
+.nav-tabs {
+    border-bottom: 0;
+}
+
+.nav-tabs > li > a {
+    margin-right: 0px;
+}
+
+.nav-tabs > li {
+    width: 33.333%;
+}
+
+.active .sans, .active .find, .active .raad {
+    background-color: #45a175 !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: 0;
+}
+
+/* RESPONSIVE FIXUP */
+
+@media screen and (max-width: 1200px) {
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .item_top {
+        display: grid;
+        grid-auto-rows: auto;
+        gap: 30px;
+    }
+    .tab-content {
+        height: auto;
+    }
+}

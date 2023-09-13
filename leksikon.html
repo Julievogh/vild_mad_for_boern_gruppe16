@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="generel_style.css" />
+    <link rel="stylesheet" href="leksikon.css" />
     <link rel="stylesheet" href="https://use.typekit.net/jyw8sbg.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
     <header class="utility-bar">
@@ -30,12 +35,40 @@
     </nav>
 
     <main>
-      <p>
-        Dolore laboris cupidatat sunt deserunt veniam. Aliquip veniam consequat
-        ipsum veniam. Tempor nostrud qui Lorem cupidatat aliquip ut voluptate.
-        Ipsum consectetur est ullamco ipsum. Aute aliqua voluptate ullamco est
-        labore duis tempor occaecat et sit amet.
-      </p>
+      <div class="items">
+        <template id="item_template">
+          <div class="item_box">
+            <div class="item">
+              <div class="item_top">
+                <img src="nope.jpg" alt="raavare">
+                <h5 class="title"></h5>
+                <p class="description"></p>
+                <a href="ravare.html">Opskrifter</a>
+              </div>
+            </div>
+            <div class="item_bottom">
+              <div class="ui-tabs item_info">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" class="find" href="#find">Find Dem Her</a></li>
+                  <li><a data-toggle="tab" class="sans" href="#sans">Brug Sanserne</a></li>
+                  <li><a data-toggle="tab" class="raad" href="#raad">Gode Råd</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="find">
+                    <p></p>
+                  </div>
+                  <div class="tab-pane fade" id="sans">
+                    <p></p>
+                  </div>
+                  <div class="tab-pane fade" id="raad">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
     </main>
 
     <footer>
@@ -50,5 +83,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="script/dataload_main.js"></script>
   </body>
 </html>
