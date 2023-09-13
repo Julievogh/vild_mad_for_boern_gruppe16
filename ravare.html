@@ -9,7 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/ed11d827ab.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="generel_style.css" />
-    <link rel="stylesheet" href="opskrift.css" />
+    <link rel="stylesheet" href="leksikon.css" />
     <link rel="stylesheet" href="https://use.typekit.net/jyw8sbg.css" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
@@ -36,26 +36,21 @@
     </nav>
 
     <main>
-      <div class="rec_container">
-        <div class="rec_left">
+      <div class="ravare_item">
+        <div class="ravare_left">
           <img src="" alt="">
         </div>
-        <div class="rec_right">
+        <div class="ravare_right">
           <h3></h3>
-          <p class="ravare_list"><span></span></p>
-          <p class="rec_desc"></p>
-          <h4><a data-toggle="collapse" href="#ingredients" role="button" aria-expanded="true" aria-controls="ingredients"><i class="fa-solid fa-carrot"></i> Ingredienser</a></h4>
-          <div id="ingredients" class="ingredients collapse in" aria-expanded="true">
-            <ul class="ingredients_list">
-              <li></li>
-            </ul>
-          </div>
-          <h4><a data-toggle="collapse" href="#preparation" role="button" aria-expanded="true" aria-controls="preparation"><i class="fa-solid fa-kitchen-set"></i> Tilberedning</a></h4>
-          <div id="preparation" class="preparation collapse in" aria-expanded="true">
-            <ol class="preparation_steps">
-              <li></li>
-            </ol>
-          </div>
+          <p class="ravare_category"></p>
+          <p class="seasons_list"></p>
+          <p class="ravare_desc"></p>
+          <h4><a data-toggle="collapse" href="#ravare_find" role="button" aria-expanded="true" aria-controls="ravare_find"><i class="fa-solid fa-magnifying-glass"></i> Find dem her</a></h4>
+          <div id="ravare_find" class="ravare_find collapse in" aria-expanded="true"></div>
+          <h4><a data-toggle="collapse" href="#ravare_sans" role="button" aria-expanded="true" aria-controls="ravare_find"><i class="fa-solid fa-eye"></i> Brug Sanserne</a></h4>
+          <div id="ravare_sans" class="ravare_sans collapse in" aria-expanded="true"></div>
+          <h4><a data-toggle="collapse" href="#ravare_raad" role="button" aria-expanded="true" aria-controls="ravare_find"><i class="fa-regular fa-hand-point-up"></i> Gode Råd</a></h4>
+          <div id="ravare_raad" class="ravare_raad collapse in" aria-expanded="true"></div>
         </div>
       </div>
     </main>
@@ -74,7 +69,7 @@
     <script src="script.js"></script>
     <script src="script/dataload_main.js"></script>
     <script>
-      getRecipies();
+      getProducts();
     </script>
   </body>
 </html>

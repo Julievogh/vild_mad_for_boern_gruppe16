@@ -29,6 +29,13 @@
     padding: 30px;
 }
 
+.title a {
+    display: inline;
+    background-color: transparent !important;
+    color: black;
+    font-size: 20px;
+}
+
 .item_top {
     display: grid;
     grid-auto-rows: 300px 20px 265px 85px;
@@ -105,6 +112,68 @@
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
     border: 0;
+}
+
+/* SINGLE PRODUCT */
+.ravare_item {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px; 
+    margin: 30px auto;
+}
+
+.ravare_item h3 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.ravare_item h4 {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.ravare_item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.ravare_item img {
+    width: 100%;
+}
+
+.ravare_sans, .ravare_find, .ravare_raad {
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.ravare_sans {
+    background-color: #45a175;
+}
+
+.ravare_find {
+    background-color: #b9d047;
+}
+
+.ravare_raad {
+    background-color: #f18d68;
+}
+
+.seasons_list span {
+    background-color: #45a175;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.ravare_desc {
+    margin: 30px auto;
+}
+
+.ravare_category {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 /* RESPONSIVE FIXUP */

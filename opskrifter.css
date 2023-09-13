@@ -1,0 +1,51 @@
+.rec_list {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.rec_list img {
+    width: 100%;
+}
+
+.rec_list h4 {
+    text-decoration: none !important;
+}
+
+.rec_list a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.rec_item {
+    background-color: #b3c988;
+    transition: all .5s;
+}
+
+.rec_item:hover {
+    box-shadow: 5px 5px 5px #666;
+}
+
+.rec_bottom {
+    background-color: #45a175;
+    color: white;
+    padding: 30px;
+    height: 270px;
+}
+
+/* RESPONSIVE FIXUP */
+@media screen and (max-width: 1200px) {
+    .rec_list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .rec_list {
+        grid-template-columns: 1fr;
+    }
+}
