@@ -39,6 +39,7 @@ async function getProducts(id = null) {
         document.querySelector(".ravare_find").textContent = data[0].sankning;
         document.querySelector(".ravare_sans").textContent = data[0].description_info;
         document.querySelector(".ravare_raad").textContent = data[0].season_info;
+        document.querySelector(".ravare_warn").textContent = data[0].warning;
     }
     else {
         const { data, error } = await _supabase
@@ -55,22 +56,19 @@ async function getProducts(id = null) {
             copy.querySelector(".find").setAttribute("href", "#find_" + data[i].id);
             copy.querySelector(".sans").setAttribute("href", "#sans_" + data[i].id);
             copy.querySelector(".raad").setAttribute("href", "#raad_" + data[i].id);
+            copy.querySelector(".warn").setAttribute("href", "#warn_" + data[i].id);
 
             copy.querySelector("#sans").setAttribute("id", "sans_" + data[i].id);
             copy.querySelector("#find").setAttribute("id", "find_" + data[i].id);
             copy.querySelector("#raad").setAttribute("id", "raad_" + data[i].id);
+            copy.querySelector("#warn").setAttribute("id", "warn_" + data[i].id);
 
             copy.querySelector("#find_" + data[i].id + " p").textContent = data[i].sankning;
             copy.querySelector("#sans_" + data[i].id + " p").textContent = data[i].description_info;
             copy.querySelector("#raad_" + data[i].id + " p").textContent = data[i].season_info;
-            //copy.querySelector(".recipies").setAttribute("href", "opskrifter.html?ravareid=" + data[i].title);
+            copy.querySelector("#warn_" + data[i].id + " p").textContent = data[i].warning;
 
-            //copy.querySelector(".category").innerHTML = "<strong>Kategori: </strong>" + data[i].categories_name;
             copy.querySelector(".description").innerHTML = data[i].description;
-            //copy.querySelector(".sank_sted").innerHTML = "<strong>Sankested: </strong>" + data[i].sankested;
-            //copy.querySelector(".sank_info").innerHTML = "<strong>Sankning: </strong>" + data[i].sankning;
-            //copy.querySelector(".season_info").innerHTML = "<strong>Sæson: </strong>" + data[i].season_info;
-            //copy.querySelector(".description_info").innerHTML = "<strong>Beskrivelse: </strong>" + data[i].description_info;
             copy.querySelector("img").setAttribute("src", data[i].profile_image_src);
             document.querySelector(".items").appendChild(copy);
             i++;
@@ -234,4 +232,55 @@ async function getRecipies() {
             i++;
         });
     }
+}
+
+// data pull for index
+async function getFeaturedProducts() {
+    const { createClient } = supabase
+    const _supabase = createClient('https://kswscmjoqonxyqabktgv.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtzd3NjbWpvcW9ueHlxYWJrdGd2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM4MjM1OTEsImV4cCI6MjAwOTM5OTU5MX0.ILlRzBX-qHqmGfVcm73fU_PbsmGFQur9pOkETXzSAHE')
+    //console.log('Supabase Instance: ', _supabase)
+
+    const { data, error } = await _supabase
+            .from('vildmad')
+            .select()
+            .limit(6);
+
+    console.log(data);
+    let i = 0;
+    data.forEach(function() {
+        const temp = document.querySelector("#index_ravare_template").content;
+        const copy = temp.cloneNode(true);
+
+        copy.querySelector(".background_råvare h3").innerHTML = data[i].title;
+        copy.querySelector(".two_box_container img").setAttribute("src", data[i].profile_image_src);
+        copy.querySelector(".råvare_tekst").textContent = data[i].description;
+
+        copy.querySelector("#ravare_find p").textContent = data[i].sankning;
+        copy.querySelector("#ravare_sans p").textContent = data[i].description_info;
+        copy.querySelector("#ravare_raad p").textContent = data[i].season_info;
+        copy.querySelector("#ravare_warn p").textContent = data[i].warning;
+
+        document.querySelector(".container").appendChild(copy);
+        i++;
+    })
+    const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-content");
+
+// kopieret tabs funktionalitet fra script.js (tror den skal være i samme async function, ellers virkede det ikke, som om det er samme script)
+tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+            // Skjul eller vis indholdet afhængigt af den aktuelle tilstand
+            if (tabContents[index].classList.contains("active")) {
+            tabContents[index].classList.remove("active");
+            } else {
+            // Skjul alt indhold
+            tabContents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            // Vis kun det valgte indhold
+            tabContents[index].classList.add("active");
+            }
+        });
+    });
 }

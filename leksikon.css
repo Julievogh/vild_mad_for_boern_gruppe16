@@ -76,8 +76,10 @@
     border-radius: 0px;
 }
 
-.sans, .find, .raad {
+.sans, .find, .raad, .warn {
     width: 100%;
+    font-size: 14px;
+    padding: 3px !important;
 }
 
 .find {
@@ -92,6 +94,10 @@
     background-color: #fbbd76;
 }
 
+.warn {
+    background-color: #f4b191;
+}
+
 /* BOOTSTRAP OVERRIDE */
 
 .nav-tabs {
@@ -100,13 +106,14 @@
 
 .nav-tabs > li > a {
     margin-right: 0px;
+    border: 0;
 }
 
 .nav-tabs > li {
-    width: 33.333%;
+    width: 25%;
 }
 
-.active .sans, .active .find, .active .raad {
+.active .sans, .active .find, .active .raad, .active .warn {
     background-color: #45a175 !important;
 }
 

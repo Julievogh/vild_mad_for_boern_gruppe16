@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="generel_style.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://use.typekit.net/jyw8sbg.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
     <header class="utility-bar">
@@ -57,6 +58,7 @@
         </div>
 
         <div class="container">
+          <template id="index_ravare_template">
           <div class="box" id="box1">
             <article class="råvare_container" id="råvare1">
               <div class="background_råvare">
@@ -68,7 +70,7 @@
                     <div class="råvare_tekst">
                       <p>
                         Der findes tæt på 100 forskellige slags brombær i
-                        Danmark – og både smager og ser ret forskelligt ud. For
+                        Danmark - og både smager og ser ret forskelligt ud. For
                         overskuelighedens skyld kalder vi dem alle brombær
                       </p>
                     </div>
@@ -94,7 +96,7 @@
               </div>
 
               <div class="tab-content-container">
-                <div class="tab-content find_dem_content">
+                <div id="ravare_find" class="tab-content find_dem_content">
                   <h5>Find dem her</h5>
                   <p>
                     En vildnis af lange grønne ranker, der skyder op ad jorden
@@ -109,7 +111,7 @@
                   </p>
                 </div>
 
-                <div class="tab-content brug_sanserne_content">
+                <div id="ravare_sans" class="tab-content brug_sanserne_content">
                   <h5>Brug sanserne</h5>
                   <p>
                     I MUNDEN Umodne brombær er meget sure. De modne bær og skud
@@ -119,7 +121,7 @@
                   </p>
                 </div>
 
-                <div class="tab-content gode_råd_content">
+                <div id="ravare_raad" class="tab-content gode_råd_content">
                   <h5>Gode råd</h5>
                   <p>
                     Husk at tage gode handsker på og helt dækkende tøj, når du
@@ -136,7 +138,7 @@
                   </p>
                 </div>
 
-                <div class="tab-content advarsel_content">
+                <div id="ravare_warn" class="tab-content advarsel_content">
                   <h5>ADVARSEL</h5>
                   <p>
                     Ingen risiko for farlige forvekslinger, men man kan godt
@@ -155,496 +157,7 @@
               </div>
             </article>
           </div>
-          <div class="box" id="box2">
-            <article class="råvare_container" id="råvare2">
-              <div class="background_råvare">
-                <h3>BROMBÆR 2</h3>
-                <div class="two_box_container">
-                  <div class="råvare_overblik">
-                    <img src="img/VILDMAD_RV_Brombaer_V_10.svg" alt="råvare" />
-
-                    <div class="råvare_tekst">
-                      <p>
-                        Der findes tæt på 100 forskellige slags brombær i
-                        Danmark – og både smager og ser ret forskelligt ud. For
-                        overskuelighedens skyld kalder vi dem alle brombær
-                      </p>
-                    </div>
-                  </div>
-                  <a class="opskrift_button" href="opskrift.html"
-                    ><img src="img/opskrift.svg" alt="opskrift knap"
-                  /></a>
-                  <div class="ekstra_info">
-                    <h4>måneder og landskab:</h4>
-                    <div class="aktive_måneder">januar, februar</div>
-                    <div class="landskaber">Skov, by</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tabs">
-                <div class="tab find-dem-tab find_dem_tab">Find dem her</div>
-                <div class="tab brug-sanserne-tab brug_sanserne_tab">
-                  Brug sanserne
-                </div>
-                <div class="tab gode-rad-tab gode_råd_tab">Gode råd</div>
-                <div class="tab advarsel-tab advarsel_tab">Advarsel</div>
-              </div>
-
-              <div class="tab-content-container">
-                <div class="tab-content find_dem_content">
-                  <h5>Find dem her</h5>
-                  <p>
-                    En vildnis af lange grønne ranker, der skyder op ad jorden
-                    og ned igen i tornede sammenfiltringer er et tegn på, at du
-                    godt kan begynde at glæde dig til brombær. Planten har
-                    mørkegrønne blade med hvclasslig undersclasse og små torne.
-                    Den blomstrer i juni og juli med lyse, rosa blomster, og
-                    efter afblomstringen dukker bærrene frem - i virkeligheden
-                    en hel masse små frugter, der sclassder sammen i tætte
-                    klaser. De helt umodne brombær er grønne, derefter røde og
-                    endelig - i fuldt modnet tilstand - sorte og saftige.
-                  </p>
-                </div>
-
-                <div class="tab-content brug_sanserne_content">
-                  <h5>Brug sanserne</h5>
-                  <p>
-                    I MUNDEN Umodne brombær er meget sure. De modne bær og skud
-                    er krydret, søde og dybe i smagen med et strejf af vanilje.
-                    De har et blclasst bclass med masser af saft. I NÆSEN
-                    Brombær dufter sødligt af vanilje.
-                  </p>
-                </div>
-
-                <div class="tab-content gode_råd_content">
-                  <h5>Gode råd</h5>
-                  <p>
-                    Husk at tage gode handsker på og helt dækkende tøj, når du
-                    skal på brombærjagt - tornene er ikke til at spøge med. Mest
-                    normalt er det at gå efter de helt mørkerøde eller sorte
-                    bær, men de grønne, umodne brombær kan også bruges. De modne
-                    bær skal du helst plukke i tørvejr. Hvis du tager bærrene af
-                    stilken, mens det regner, har de en tendens til at blive
-                    vandede i konsistensen, og de får lettere til smat. Sæsonens
-                    første bær er som regel de bedste - de bliver størst og
-                    udvikler mest sødme. Du kan i øvrigt hjælpe brombærplanten
-                    med at skyde stærkt og mangfoldigt ved at fjerne de visne
-                    skud fra planten, når du plukker.
-                  </p>
-                </div>
-
-                <div class="tab-content advarsel_content">
-                  <h5>ADVARSEL</h5>
-                  <p>
-                    Ingen risiko for farlige forvekslinger, men man kan godt
-                    tage fejl af brombær og korbær. Korbærplanten bliver dog
-                    ikke lige så stor som brombær og har mindre torne uden
-                    brombærrankens karakteristiske runding. Korbær kan sagtens
-                    spises, men har ikke brombærrets dybe sødme. Både brombær og
-                    korbær indgår ud over det naturligt i en masse forskellige
-                    krydsninger med hinanden - og med hindbær - og det er slet
-                    ikke usædvanligt at støde på disse til tclasser meget
-                    vellykkede bastarder i skoven. Boysenbærret er en af disse
-                    bastarder, der ligner et forvokset brombær, men som har
-                    svært ved at følge med smagsmæssigt.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="box" id="box3">
-            <article class="råvare_container" id="råvare3">
-              <div class="background_råvare">
-                <h3>BROMBÆR 3</h3>
-                <div class="two_box_container">
-                  <div class="råvare_overblik">
-                    <img src="img/VILDMAD_RV_Brombaer_V_10.svg" alt="råvare" />
-
-                    <div class="råvare_tekst">
-                      <p>
-                        Der findes tæt på 100 forskellige slags brombær i
-                        Danmark – og både smager og ser ret forskelligt ud. For
-                        overskuelighedens skyld kalder vi dem alle brombær
-                      </p>
-                    </div>
-                  </div>
-                  <a class="opskrift_button" href="opskrift.html"
-                    ><img src="img/opskrift.svg" alt="opskrift knap"
-                  /></a>
-                  <div class="ekstra_info">
-                    <h4>måneder og landskab:</h4>
-                    <div class="aktive_måneder">januar, februar</div>
-                    <div class="landskaber">Skov, by</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tabs">
-                <div class="tab find-dem-tab find_dem_tab">Find dem her</div>
-                <div class="tab brug-sanserne-tab brug_sanserne_tab">
-                  Brug sanserne
-                </div>
-                <div class="tab gode-rad-tab gode_råd_tab">Gode råd</div>
-                <div class="tab advarsel-tab advarsel_tab">Advarsel</div>
-              </div>
-
-              <div class="tab-content-container">
-                <div class="tab-content find_dem_content">
-                  <h5>Find dem her</h5>
-                  <p>
-                    En vildnis af lange grønne ranker, der skyder op ad jorden
-                    og ned igen i tornede sammenfiltringer er et tegn på, at du
-                    godt kan begynde at glæde dig til brombær. Planten har
-                    mørkegrønne blade med hvclasslig undersclasse og små torne.
-                    Den blomstrer i juni og juli med lyse, rosa blomster, og
-                    efter afblomstringen dukker bærrene frem - i virkeligheden
-                    en hel masse små frugter, der sclassder sammen i tætte
-                    klaser. De helt umodne brombær er grønne, derefter røde og
-                    endelig - i fuldt modnet tilstand - sorte og saftige.
-                  </p>
-                </div>
-
-                <div class="tab-content brug_sanserne_content">
-                  <h5>Brug sanserne</h5>
-                  <p>
-                    I MUNDEN Umodne brombær er meget sure. De modne bær og skud
-                    er krydret, søde og dybe i smagen med et strejf af vanilje.
-                    De har et blclasst bclass med masser af saft. I NÆSEN
-                    Brombær dufter sødligt af vanilje.
-                  </p>
-                </div>
-
-                <div class="tab-content gode_råd_content">
-                  <h5>Gode råd</h5>
-                  <p>
-                    Husk at tage gode handsker på og helt dækkende tøj, når du
-                    skal på brombærjagt - tornene er ikke til at spøge med. Mest
-                    normalt er det at gå efter de helt mørkerøde eller sorte
-                    bær, men de grønne, umodne brombær kan også bruges. De modne
-                    bær skal du helst plukke i tørvejr. Hvis du tager bærrene af
-                    stilken, mens det regner, har de en tendens til at blive
-                    vandede i konsistensen, og de får lettere til smat. Sæsonens
-                    første bær er som regel de bedste - de bliver størst og
-                    udvikler mest sødme. Du kan i øvrigt hjælpe brombærplanten
-                    med at skyde stærkt og mangfoldigt ved at fjerne de visne
-                    skud fra planten, når du plukker.
-                  </p>
-                </div>
-
-                <div class="tab-content advarsel_content">
-                  <h5>ADVARSEL</h5>
-                  <p>
-                    Ingen risiko for farlige forvekslinger, men man kan godt
-                    tage fejl af brombær og korbær. Korbærplanten bliver dog
-                    ikke lige så stor som brombær og har mindre torne uden
-                    brombærrankens karakteristiske runding. Korbær kan sagtens
-                    spises, men har ikke brombærrets dybe sødme. Både brombær og
-                    korbær indgår ud over det naturligt i en masse forskellige
-                    krydsninger med hinanden - og med hindbær - og det er slet
-                    ikke usædvanligt at støde på disse til tclasser meget
-                    vellykkede bastarder i skoven. Boysenbærret er en af disse
-                    bastarder, der ligner et forvokset brombær, men som har
-                    svært ved at følge med smagsmæssigt.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="box" id="box4">
-            <article class="råvare_container" id="råvare4">
-              <div class="background_råvare">
-                <h3>BROMBÆR 4</h3>
-                <div class="two_box_container">
-                  <div class="råvare_overblik">
-                    <img src="img/VILDMAD_RV_Brombaer_V_10.svg" alt="råvare" />
-
-                    <div class="råvare_tekst">
-                      <p>
-                        Der findes tæt på 100 forskellige slags brombær i
-                        Danmark – og både smager og ser ret forskelligt ud. For
-                        overskuelighedens skyld kalder vi dem alle brombær
-                      </p>
-                    </div>
-                  </div>
-                  <a class="opskrift_button" href="opskrift.html"
-                    ><img src="img/opskrift.svg" alt="opskrift knap"
-                  /></a>
-                  <div class="ekstra_info">
-                    <h4>måneder og landskab:</h4>
-                    <div class="aktive_måneder">januar, februar</div>
-                    <div class="landskaber">Skov, by</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tabs">
-                <div class="tab find-dem-tab find_dem_tab">Find dem her</div>
-                <div class="tab brug-sanserne-tab brug_sanserne_tab">
-                  Brug sanserne
-                </div>
-                <div class="tab gode-rad-tab gode_råd_tab">Gode råd</div>
-                <div class="tab advarsel-tab advarsel_tab">Advarsel</div>
-              </div>
-
-              <div class="tab-content-container">
-                <div class="tab-content find_dem_content">
-                  <h5>Find dem her</h5>
-                  <p>
-                    En vildnis af lange grønne ranker, der skyder op ad jorden
-                    og ned igen i tornede sammenfiltringer er et tegn på, at du
-                    godt kan begynde at glæde dig til brombær. Planten har
-                    mørkegrønne blade med hvclasslig undersclasse og små torne.
-                    Den blomstrer i juni og juli med lyse, rosa blomster, og
-                    efter afblomstringen dukker bærrene frem - i virkeligheden
-                    en hel masse små frugter, der sclassder sammen i tætte
-                    klaser. De helt umodne brombær er grønne, derefter røde og
-                    endelig - i fuldt modnet tilstand - sorte og saftige.
-                  </p>
-                </div>
-
-                <div class="tab-content brug_sanserne_content">
-                  <h5>Brug sanserne</h5>
-                  <p>
-                    I MUNDEN Umodne brombær er meget sure. De modne bær og skud
-                    er krydret, søde og dybe i smagen med et strejf af vanilje.
-                    De har et blclasst bclass med masser af saft. I NÆSEN
-                    Brombær dufter sødligt af vanilje.
-                  </p>
-                </div>
-
-                <div class="tab-content gode_råd_content">
-                  <h5>Gode råd</h5>
-                  <p>
-                    Husk at tage gode handsker på og helt dækkende tøj, når du
-                    skal på brombærjagt - tornene er ikke til at spøge med. Mest
-                    normalt er det at gå efter de helt mørkerøde eller sorte
-                    bær, men de grønne, umodne brombær kan også bruges. De modne
-                    bær skal du helst plukke i tørvejr. Hvis du tager bærrene af
-                    stilken, mens det regner, har de en tendens til at blive
-                    vandede i konsistensen, og de får lettere til smat. Sæsonens
-                    første bær er som regel de bedste - de bliver størst og
-                    udvikler mest sødme. Du kan i øvrigt hjælpe brombærplanten
-                    med at skyde stærkt og mangfoldigt ved at fjerne de visne
-                    skud fra planten, når du plukker.
-                  </p>
-                </div>
-
-                <div class="tab-content advarsel_content">
-                  <h5>ADVARSEL</h5>
-                  <p>
-                    Ingen risiko for farlige forvekslinger, men man kan godt
-                    tage fejl af brombær og korbær. Korbærplanten bliver dog
-                    ikke lige så stor som brombær og har mindre torne uden
-                    brombærrankens karakteristiske runding. Korbær kan sagtens
-                    spises, men har ikke brombærrets dybe sødme. Både brombær og
-                    korbær indgår ud over det naturligt i en masse forskellige
-                    krydsninger med hinanden - og med hindbær - og det er slet
-                    ikke usædvanligt at støde på disse til tclasser meget
-                    vellykkede bastarder i skoven. Boysenbærret er en af disse
-                    bastarder, der ligner et forvokset brombær, men som har
-                    svært ved at følge med smagsmæssigt.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="box" id="box5">
-            <article class="råvare_container" id="råvare5">
-              <div class="background_råvare">
-                <h3>BROMBÆR 5</h3>
-                <div class="two_box_container">
-                  <div class="råvare_overblik">
-                    <img src="img/VILDMAD_RV_Brombaer_V_10.svg" alt="råvare" />
-
-                    <div class="råvare_tekst">
-                      <p>
-                        Der findes tæt på 100 forskellige slags brombær i
-                        Danmark – og både smager og ser ret forskelligt ud. For
-                        overskuelighedens skyld kalder vi dem alle brombær
-                      </p>
-                    </div>
-                  </div>
-                  <a class="opskrift_button" href="opskrift.html"
-                    ><img src="img/opskrift.svg" alt="opskrift knap"
-                  /></a>
-                  <div class="ekstra_info">
-                    <h4>måneder og landskab:</h4>
-                    <div class="aktive_måneder">januar, februar</div>
-                    <div class="landskaber">Skov, by</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tabs">
-                <div class="tab find-dem-tab find_dem_tab">Find dem her</div>
-                <div class="tab brug-sanserne-tab brug_sanserne_tab">
-                  Brug sanserne
-                </div>
-                <div class="tab gode-rad-tab gode_råd_tab">Gode råd</div>
-                <div class="tab advarsel-tab advarsel_tab">Advarsel</div>
-              </div>
-
-              <div class="tab-content-container">
-                <div class="tab-content find_dem_content">
-                  <h5>Find dem her</h5>
-                  <p>
-                    En vildnis af lange grønne ranker, der skyder op ad jorden
-                    og ned igen i tornede sammenfiltringer er et tegn på, at du
-                    godt kan begynde at glæde dig til brombær. Planten har
-                    mørkegrønne blade med hvclasslig undersclasse og små torne.
-                    Den blomstrer i juni og juli med lyse, rosa blomster, og
-                    efter afblomstringen dukker bærrene frem - i virkeligheden
-                    en hel masse små frugter, der sclassder sammen i tætte
-                    klaser. De helt umodne brombær er grønne, derefter røde og
-                    endelig - i fuldt modnet tilstand - sorte og saftige.
-                  </p>
-                </div>
-
-                <div class="tab-content brug_sanserne_content">
-                  <h5>Brug sanserne</h5>
-                  <p>
-                    I MUNDEN Umodne brombær er meget sure. De modne bær og skud
-                    er krydret, søde og dybe i smagen med et strejf af vanilje.
-                    De har et blclasst bclass med masser af saft. I NÆSEN
-                    Brombær dufter sødligt af vanilje.
-                  </p>
-                </div>
-
-                <div class="tab-content gode_råd_content">
-                  <h5>Gode råd</h5>
-                  <p>
-                    Husk at tage gode handsker på og helt dækkende tøj, når du
-                    skal på brombærjagt - tornene er ikke til at spøge med. Mest
-                    normalt er det at gå efter de helt mørkerøde eller sorte
-                    bær, men de grønne, umodne brombær kan også bruges. De modne
-                    bær skal du helst plukke i tørvejr. Hvis du tager bærrene af
-                    stilken, mens det regner, har de en tendens til at blive
-                    vandede i konsistensen, og de får lettere til smat. Sæsonens
-                    første bær er som regel de bedste - de bliver størst og
-                    udvikler mest sødme. Du kan i øvrigt hjælpe brombærplanten
-                    med at skyde stærkt og mangfoldigt ved at fjerne de visne
-                    skud fra planten, når du plukker.
-                  </p>
-                </div>
-
-                <div class="tab-content advarsel_content">
-                  <h5>ADVARSEL</h5>
-                  <p>
-                    Ingen risiko for farlige forvekslinger, men man kan godt
-                    tage fejl af brombær og korbær. Korbærplanten bliver dog
-                    ikke lige så stor som brombær og har mindre torne uden
-                    brombærrankens karakteristiske runding. Korbær kan sagtens
-                    spises, men har ikke brombærrets dybe sødme. Både brombær og
-                    korbær indgår ud over det naturligt i en masse forskellige
-                    krydsninger med hinanden - og med hindbær - og det er slet
-                    ikke usædvanligt at støde på disse til tclasser meget
-                    vellykkede bastarder i skoven. Boysenbærret er en af disse
-                    bastarder, der ligner et forvokset brombær, men som har
-                    svært ved at følge med smagsmæssigt.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="box" id="box6">
-            <article class="råvare_container" id="råvare6">
-              <div class="background_råvare">
-                <h3>BROMBÆR 6</h3>
-                <div class="two_box_container">
-                  <div class="råvare_overblik">
-                    <img src="img/VILDMAD_RV_Brombaer_V_10.svg" alt="råvare" />
-
-                    <div class="råvare_tekst">
-                      <p>
-                        Der findes tæt på 100 forskellige slags brombær i
-                        Danmark – og både smager og ser ret forskelligt ud. For
-                        overskuelighedens skyld kalder vi dem alle brombær
-                      </p>
-                    </div>
-                  </div>
-                  <a class="opskrift_button" href="opskrift.html"
-                    ><img src="img/opskrift.svg" alt="opskrift knap"
-                  /></a>
-                  <div class="ekstra_info">
-                    <h4>måneder og landskab:</h4>
-                    <div class="aktive_måneder">januar, februar</div>
-                    <div class="landskaber">Skov, by</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tabs">
-                <div class="tab find-dem-tab find_dem_tab">Find dem her</div>
-                <div class="tab brug-sanserne-tab brug_sanserne_tab">
-                  Brug sanserne
-                </div>
-                <div class="tab gode-rad-tab gode_råd_tab">Gode råd</div>
-                <div class="tab advarsel-tab advarsel_tab">Advarsel</div>
-              </div>
-
-              <div class="tab-content-container">
-                <div class="tab-content find_dem_content">
-                  <h5>Find dem her</h5>
-                  <p>
-                    En vildnis af lange grønne ranker, der skyder op ad jorden
-                    og ned igen i tornede sammenfiltringer er et tegn på, at du
-                    godt kan begynde at glæde dig til brombær. Planten har
-                    mørkegrønne blade med hvclasslig undersclasse og små torne.
-                    Den blomstrer i juni og juli med lyse, rosa blomster, og
-                    efter afblomstringen dukker bærrene frem - i virkeligheden
-                    en hel masse små frugter, der sclassder sammen i tætte
-                    klaser. De helt umodne brombær er grønne, derefter røde og
-                    endelig - i fuldt modnet tilstand - sorte og saftige.
-                  </p>
-                </div>
-
-                <div class="tab-content brug_sanserne_content">
-                  <h5>Brug sanserne</h5>
-                  <p>
-                    I MUNDEN Umodne brombær er meget sure. De modne bær og skud
-                    er krydret, søde og dybe i smagen med et strejf af vanilje.
-                    De har et blclasst bclass med masser af saft. I NÆSEN
-                    Brombær dufter sødligt af vanilje.
-                  </p>
-                </div>
-
-                <div class="tab-content gode_råd_content">
-                  <h5>Gode råd</h5>
-                  <p>
-                    Husk at tage gode handsker på og helt dækkende tøj, når du
-                    skal på brombærjagt - tornene er ikke til at spøge med. Mest
-                    normalt er det at gå efter de helt mørkerøde eller sorte
-                    bær, men de grønne, umodne brombær kan også bruges. De modne
-                    bær skal du helst plukke i tørvejr. Hvis du tager bærrene af
-                    stilken, mens det regner, har de en tendens til at blive
-                    vandede i konsistensen, og de får lettere til smat. Sæsonens
-                    første bær er som regel de bedste - de bliver størst og
-                    udvikler mest sødme. Du kan i øvrigt hjælpe brombærplanten
-                    med at skyde stærkt og mangfoldigt ved at fjerne de visne
-                    skud fra planten, når du plukker.
-                  </p>
-                </div>
-
-                <div class="tab-content advarsel_content">
-                  <h5>ADVARSEL</h5>
-                  <p>
-                    Ingen risiko for farlige forvekslinger, men man kan godt
-                    tage fejl af brombær og korbær. Korbærplanten bliver dog
-                    ikke lige så stor som brombær og har mindre torne uden
-                    brombærrankens karakteristiske runding. Korbær kan sagtens
-                    spises, men har ikke brombærrets dybe sødme. Både brombær og
-                    korbær indgår ud over det naturligt i en masse forskellige
-                    krydsninger med hinanden - og med hindbær - og det er slet
-                    ikke usædvanligt at støde på disse til tclasser meget
-                    vellykkede bastarder i skoven. Boysenbærret er en af disse
-                    bastarder, der ligner et forvokset brombær, men som har
-                    svært ved at følge med smagsmæssigt.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
+        </template>
         </div>
 
         <img
@@ -823,6 +336,10 @@
         <img src="img/facebook.svg" alt="facebook" />
       </div>
     </footer>
+    <script src="script/dataload_main.js"></script>
+    <script>
+      getFeaturedProducts();
+    </script>
     <script src="database.js"></script>
     <script src="script.js"></script>
   </body>

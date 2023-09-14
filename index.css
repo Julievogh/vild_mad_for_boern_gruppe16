@@ -359,3 +359,18 @@ button {
     margin-right: 20px auto;
   }
 }
+
+
+/* NEWEST - fixup for dynamically loaded content */
+.råvare_overblik img {
+  width: 150px;
+  height: 150px;
+}
+
+.råvare_tekst {
+  min-height: 380px;
+}
+
+.background_råvare h3 {
+  font-size: 2vw;
+}
