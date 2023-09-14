@@ -8,6 +8,7 @@
 
 #maskotter_img {
   width: 80%;
+  max-width: 1000px;
   height: auto;
 }
 
@@ -359,7 +360,6 @@ button {
     margin-right: 20px auto;
   }
 }
-
 
 /* NEWEST - fixup for dynamically loaded content */
 .råvare_overblik img {
