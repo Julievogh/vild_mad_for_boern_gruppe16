@@ -149,7 +149,7 @@
     width: 100%;
 }
 
-.ravare_sans, .ravare_find, .ravare_raad {
+.ravare_sans, .ravare_find, .ravare_raad, .ravare_warn {
     margin-bottom: 30px;
     padding: 30px;
 }
@@ -163,6 +163,10 @@
 }
 
 .ravare_raad {
+    background-color: #b3c988;
+}
+
+.ravare_warn {
     background-color: #f18d68;
 }
 

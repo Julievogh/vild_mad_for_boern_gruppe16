@@ -266,7 +266,7 @@ async function getFeaturedProducts() {
     const tabs = document.querySelectorAll(".tab");
 const tabContents = document.querySelectorAll(".tab-content");
 
-// kopieret tabs funktionalitet fra script.js (tror den skal være i samme async function, ellers virkede det ikke, som om det er samme script)
+// kopieret tabs funktionalitet fra script.js (tror den skal være i samme async function, ellers virkede det ikke, selvom det er samme script)
 tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
             // Skjul eller vis indholdet afhængigt af den aktuelle tilstand
