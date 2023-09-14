@@ -350,4 +350,10 @@ button {
   .box.active {
     display: block;
   }
+
+  .sæson_cirkel_container img {
+    width: 12vh;
+    flex: 0 0 calc(20% - 30px);
+    margin-right: 20px;
+  }
 }
