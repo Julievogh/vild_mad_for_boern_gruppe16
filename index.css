@@ -6,142 +6,6 @@
   padding: 20px;
 }
 
-/* --- CARDS --- */
-
-.indhold {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin: 2rem 1.5rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.card_container {
-  display: flex;
-  background-color: #b3c988;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-width: 200px;
-  max-width: 450px;
-}
-
-/*BILLEDET TIL VENSTRE*/
-
-.råvare_img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.cards_img {
-  max-width: 40%;
-  margin: 0 auto;
-}
-
-/* BOKSEN MED TEKST*/
-.slide_container {
-  max-width: 40rem;
-  height: 16rem;
-  background-color: #f9f2e0;
-  padding: 1rem 1.25rem;
-  margin: 1.25rem 7rem;
-  margin-bottom: 2.5rem;
-  border-radius: 1rem;
-  overflow: scroll;
-  display: flex;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  gap: 1rem;
-}
-
-/*SLIDES*/
-.slide {
-  width: 100%;
-  height: 100%;
-  flex: 1 0 100%;
-}
-
-/*CARD NAVIGATIONS*/
-
-.card_container button {
-  padding: 0rem;
-  margin: 0rem;
-}
-
-.card_pil {
-  height: 40px;
-  width: 40px;
-  stroke: #45a175;
-}
-
-.card_pil:hover {
-  stroke: #f07041;
-}
-
-.card_container {
-  width: 100%;
-  background-color: #b3c988;
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card_nav {
-  width: 40px;
-  height: 40px;
-  background-color: #f9f2e0;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Pile margin */
-
-.card_nav.btn--right {
-  right: 8px;
-}
-
-.card_nav.btn--left {
-  left: 8px;
-}
-
-.dots {
-}
-
-.dot_fill {
-  height: 10px;
-  width: 10px;
-  background-color: #f07041;
-  border: 2px solid #f07041;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 0px;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  background-color: #b3c988;
-  border: 2px solid #f07041;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 0px;
-}
-
-/* --- JULIES KODE --- */
-
 #maskotter_img {
   width: 80%;
   height: auto;
@@ -184,7 +48,126 @@
   margin: 0;
 }
 
-/* Illustrationer og form */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.råvare_container {
+  margin: 0;
+  padding: 0;
+}
+
+.råvare_overblik {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.opskrift_button img {
+  max-width: 35%;
+}
+.background_råvare {
+  background-color: #b3c988;
+  padding: 1rem;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.two_box_container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.råvare_tekst {
+  background-color: #f9f2e0;
+  border: solid #f07041;
+  margin: 1rem;
+}
+
+/* TAB FANER*/
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+}
+
+/* skjul al indhold undtagen det første */
+.tab-content {
+  display: none;
+}
+
+/* aktivér synligheden for det valgte indhold */
+.tab-content.active {
+  display: block;
+}
+
+/* Tilføj stilarter til fanerne */
+.tab {
+  cursor: pointer;
+  padding: 6px 1px;
+  width: 100px;
+  text-align: center;
+  height: 50px;
+  margin: 0;
+}
+
+.brug-sanserne-tab,
+.find-dem-tab,
+.gode-rad-tab,
+.advarsel-tab {
+  width: 100px;
+}
+
+/* Tilføj baggrundsfarver, tekstfarver, etc.  */
+
+.find-dem-tab,
+.find_dem_content {
+  background-color: #45a175;
+}
+
+.brug-sanserne-tab,
+.brug_sanserne_content {
+  background-color: #b9d047;
+}
+
+.gode-rad-tab,
+.gode_råd_content {
+  background-color: #fbbd76;
+}
+
+.advarsel-tab,
+.advarsel_content {
+  background-color: #f18d68;
+}
+
+.tab-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0px;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.tab-content {
+  width: 400px;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
 
 .lille_illustration {
   max-width: 300px;
@@ -249,12 +232,12 @@ form {
 }
 
 .quiz-question input[type="radio"] {
-  margin-right: 5px;
-  vertical-align: middle;
+  margin-right: 5px; /* Reduce the margin between radio buttons and labels */
+  vertical-align: middle; /* Align radio buttons vertically with labels */
 }
 
 .quiz-question label {
-  flex: 1;
+  flex: 1; /* equal space mellem hvert element */
   font-size: 1.2rem;
 }
 
@@ -277,6 +260,49 @@ button {
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons h3 {
+  margin-bottom: 42px;
+  font-family: blockhead-unplugged;
+  font-size: 2rem;
+}
+
+.buttons h5 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#prev,
+#next {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 200px;
+}
+
+#prev img,
+#next img {
+  display: block; /* billedet tager sin fulde width */
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
 .download_container img {
   grid-column: 1fr;
   max-width: 100%;
@@ -285,12 +311,13 @@ button {
 }
 
 .phone_img {
-  width: 50%;
+  width: 80%;
+  max-width: 800px;
 }
 
 /* store skærme */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 864px) {
   .sæson_cirkel_container img {
     width: 20vh;
     flex: 0 0 calc(20% - 30px);
@@ -308,7 +335,6 @@ button {
   }
 
   .buttons {
-    margin: 2px;
     display: none;
   }
 }
@@ -323,10 +349,5 @@ button {
 
   .box.active {
     display: block;
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: center;
   }
 }
