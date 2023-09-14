@@ -1,5 +1,5 @@
 /* HENTER RÅVARELISTEN */
-
+/*
 const url = "https://kswscmjoqonxyqabktgv.supabase.co";
 
 const key =
@@ -17,5 +17,10 @@ fetch("https://kswscmjoqonxyqabktgv.supabase.co/rest/v1/vildmad", {
 function showData(items) {
   console.log(items);
 }
+
+*/
+
+
+
 
 
